@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑简历</title>
+    <script>
+        function validatePassword() {
+            const password = document.getElementById('password').value;
+            if (password === '123') {  
+                window.location.href = 'edit_profile.html';
+            } else {
+                alert('密码错误，请重试');
+                document.getElementById('password').value = '';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>请输入密码进行验证</h2>
+    <input type="password" id="password" placeholder="输入密码">
+    <button onclick="validatePassword()">验证</button>
+</body>
+</html>
